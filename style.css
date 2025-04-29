@@ -3,12 +3,6 @@
 	margin: 0;
 }
 
-html, body {
-  height: 100%;
-  background-color: #f2fbff; /* Match this to your section/footer bg */
-  font-family: sans-serif;
-}
-
 header {
 	background-color: #000000;
 	height:80px;
