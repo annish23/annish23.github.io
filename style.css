@@ -44,3 +44,9 @@ header li {
 	display:inline;
 	margin-right:4vw;
 }
+
+img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px; /* Adds space below the image */
+}
