@@ -22,7 +22,7 @@ h1 {
   line-height: 80px; /* Aligns the text vertically */
   background-image: url(images/miku.logo.jpg);
   background-repeat: no-repeat;
-  background-size: 60px 60px; 
+  background-size: 30px 60px; 
   background-position: center; /* Center the logo within the h1 */
   width: 210px; /* Set width of the h1 */
   height: 80px; /* Ensure the h1 has enough height for the logo */
