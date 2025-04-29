@@ -15,16 +15,18 @@ header ul {
 	line-height:80px;
 }
 h1 {
-	color: #ffffff;
-	position:absolute;
-	left:120px;
-	top:0;
-	line-height:80px;
-	background-image:url(images/miku.logo.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	width:210px;
-	text-indent:;
+  color: #ffffff;
+  position: absolute;
+  left: 120px;
+  top: 0;
+  line-height: 80px; /* Aligns the text vertically */
+  background-image: url(images/miku.logo.jpg);
+  background-repeat: no-repeat;
+  background-size: contain; /* Resize the background image to fit inside the h1 */
+  background-position: center; /* Center the logo within the h1 */
+  width: 210px; /* Set width of the h1 */
+  height: 80px; /* Ensure the h1 has enough height for the logo */
+  text-indent: -9999px; /* Hide the text, if not needed */
 }
 header li {
 	display:inline;
