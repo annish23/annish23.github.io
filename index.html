@@ -5,43 +5,92 @@
 	<link rel="stylesheet" href="style.css"> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
-	
+
 	<style>
-	  /* Center-align everything except header */
-	  body {
-	    text-align: center; /* Centers text */
+	  /* Reset default margins/paddings */
+	  * {
+	    margin: 0;
+	    padding: 0;
+	    box-sizing: border-box;
 	  }
 
-	  /* Center images */
+	  html, body {
+	    background-color: #f2fbff;
+	    height: 100%;
+	    font-family: sans-serif;
+	    text-align: center;
+	  }
+
 	  img {
 	    display: block;
-	    margin: 0 auto; /* Centers images */
-		margin-bottom: 30px; 
-		background-color: #f2fbff;
+	    margin: 0 auto 30px auto; /* Centers image & adds bottom spacing */
 	  }
 
 	  header {
-	    margin-bottom: 40px; /* Adds space below the header */
-		background-color: #f2fbff;
+	    background-color: #000;
+	    color: #fff;
+	    padding: 20px 0;
+	    margin-bottom: 60px;
 	  }
-	  
+
+	  header h1 {
+	    background-image: url(images/miku.logo.jpg);
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    width: 210px;
+	    text-indent: -9999px;
+	    height: 80px;
+	    margin: 0 auto;
+	  }
+
+	  header nav ul {
+	    list-style: none;
+	    padding: 0;
+	    margin-top: 10px;
+	  }
+
+	  header nav ul li {
+	    display: inline;
+	    margin: 0 15px;
+	  }
+
+	  header nav a {
+	    color: white;
+	    text-decoration: none;
+	  }
+
+	  header nav a:hover {
+	    text-decoration: underline;
+	  }
+
+	  section {
+	    padding: 40px 20px;
+	    background-color: inherit;
+	    overflow: hidden; /* Prevent margin collapse */
+	  }
+
+	  h2 {
+	    margin-bottom: 20px;
+	  }
+
+	  p {
+	    margin-bottom: 15px;
+	  }
+
 	  .video-container {
 	    display: flex;
 	    justify-content: center;
 	    align-items: center;
-	    height: auto;
 	    padding: 20px 0;
 	  }
-	  /* Add space between each <h2> and <p> */
-		  h2 {
-		    margin-bottom: 20px; /* Adds space below each <h2> */
-		  }
 
-		  p {
-		    margin-bottom: 15px; /* Adds space below each <p> */
-		  }
+	  footer {
+	    background-color: inherit;
+	    padding: 20px 0;
+	  }
 	</style>
 </head>
+
 <body>
 	<header>
 		<h1>AZ</h1>
