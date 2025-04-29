@@ -3,7 +3,7 @@
 	margin: 0;
 }
 header {
-	background-color: #89f3d1;
+	background-color: #000000;
 	height:80px;
 	width:100%;
 	position:relative;
@@ -23,6 +23,7 @@ h1 {
 	background-image:url(images/miku.logo.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
+	width:210px;
 	text-indent:;
 }
 header li {
