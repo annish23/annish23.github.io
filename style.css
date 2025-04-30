@@ -52,6 +52,8 @@ h1 {
 }
 
 header nav ul {
+  position:absolute;
+  right:5vw;
   list-style: none;
   padding: 0;
   margin-top: 10px;
