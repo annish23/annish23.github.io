@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta charset="UTF-8">
 	<title>Annie(Zhiqing) Zhang SFX</title>
 	<link rel="stylesheet" href="style.css"> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
@@ -9,7 +10,8 @@
 
 <body>
 	<header>
-		<h1>AZ</h1>
+		<!-- Clickable logo triggers random sound -->
+		<h1 id="logo">AZ</h1>
 		<nav>
 			<ul>
 				<li><a href="#">Sound Design</a></li>
@@ -50,5 +52,20 @@
 	<footer>
 		<p>Copyright © 2025 by Annie(Zhiqing) Zhang. All rights reserved.</p>
 	</footer>
+
+	<!-- 🔊 Sound trigger script -->
+	<script>
+		const soundFiles = [
+			'sounds/beam.wav',
+			'sounds/lemon.wav',
+			'sounds/jesus.wav'
+		];
+
+		document.getElementById("logo").addEventListener("click", function () {
+			const randomIndex = Math.floor(Math.random() * soundFiles.length);
+			const randomSound = new Audio(soundFiles[randomIndex]);
+			randomSound.play();
+		});
+	</script>
 </body>
 </html>
