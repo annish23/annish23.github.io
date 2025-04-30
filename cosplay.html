@@ -1,2 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ghost Animation Toggle</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="animation.css">
+</head>
+<body>
+
+  <!-- Toggle Button -->
+  <input id="btnGhost" type="button" value="Hide Ghost" onclick="ShowHideDiv(this)" />
+
+  <!-- Ghost Element -->
+  <div class="ghost" id="animation">
+    <img src="ghost.png" alt="Ghost"> <!-- Make sure this image is in the same folder as index.html or adjust the path -->
+  </div>
+
+  <!-- Embedded JavaScript -->
+  <script>
+    function ShowHideDiv(btnGhost) {
+      const ghost = document.getElementById("animation");
+      if (btnGhost.value === "Hide Ghost") {
+        ghost.style.display = "none";
+        btnGhost.value = "Play Ghost";
+      } else {
+        ghost.style.display = "block";
+        btnGhost.value = "Hide Ghost";
+      }
+    }
+  </script>
+
+</body>
+</html>
