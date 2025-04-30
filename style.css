@@ -65,10 +65,24 @@ header li {
 	margin-right: 4vw;
 }
 
+.showcase {
+	position: absolute;
+	right: 0;
+	width: 100%;
+	min-height: 100vh;
+	padding: 100px;
+	align-items: center;
+	color: #ffffff;
+}
 .showcase video {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+.text {
+	position: relative;
+	z-index: 10;
 }
