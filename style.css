@@ -1,100 +1,76 @@
-/* Reset default margins/paddings */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box; /* Ensures padding and margin don’t affect layout */
 }
 
 html, body {
-  background-color: #f2fbff;
-  height: 100%;
-  font-family: sans-serif;
-  text-align: center;
-  position: relative;
+	height: 100%;
+	width: 100%;
+	position: relative;
 }
 
-/* Video background */
+/* Background video styling */
 #background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the video covers the entire background */
-  z-index: -1; /* Places the video behind other content */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* Ensures the video covers the entire viewport */
+	z-index: -1; /* Ensures the video is behind content */
 }
 
-img {
-  display: block;
-  margin: 0 auto 30px auto; /* Centers image & adds bottom spacing */
-}
-
+/* Header styles */
 header {
-  background-color: #000;
-  color: #fff;
-  padding: 20px 0;
-  margin-bottom: 60px;
+	background-color: #000000;
+	height: 80px;
+	width: 100%;
+	position: relative;
+}
+
+header ul {
+	position: absolute;
+	right: 5vw;
+	top: 0;
+	line-height: 80px;
 }
 
 h1 {
-  color: #ffffff;
-  position: absolute;
-  left: 120px;
-  top: 0;
-  line-height: 80px; /* Aligns the text vertically */
-  background-image: url(images/miku.logo.jpg);
-  background-repeat: no-repeat;
-  background-size: 30px 30px; /* Set the logo to a fixed size (adjust the numbers as needed) */
-  background-position: center bottom; /* Align the background image to the bottom of the h1 */
-  width: 210px; /* Set width of the h1 */
-  height: 80px; /* Ensure the h1 has enough height for the logo */
-  text-indent: -9999px; /* Hide the text, if not needed */
+	color: #ffffff;
+	position: absolute;
+	left: 120px;
+	top: 0;
+	line-height: 80px; /* Aligns the text vertically */
+	background-image: url(images/miku.logo.jpg);
+	background-repeat: no-repeat;
+	background-size: 30px 30px; /* Set the logo to a fixed size (adjust the numbers as needed) */
+	background-position: center bottom; /* Align the background image to the bottom of the h1 */
+	width: 210px; /* Set width of the h1 */
+	height: 80px; /* Ensure the h1 has enough height for the logo */
+	text-indent: -9999px; /* Hide the text, if not needed */
 }
 
-header nav ul {
-  position:absolute;
-  right:5vw;
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
+header li {
+	display: inline;
+	margin-right: 4vw;
 }
 
-header nav ul li {
-  display: inline;
-  margin: 0 15px;
+header a {
+	color: #ffffff;
+	text-decoration: none;
 }
 
-header nav a {
-  color: white;
-  text-decoration: none;
+header a:hover {
+	text-decoration: underline;
 }
 
-header nav a:hover {
-  text-decoration: underline;
+/* Section and Footer styles */
+section, footer {
+	background-color: #f2fbff;
 }
 
-section {
-  padding: 40px 20px;
-  background-color: inherit;
-  overflow: hidden; /* Prevent margin collapse */
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
-p {
-  margin-bottom: 15px;
-}
-
-.video-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
-}
-
-footer {
-  background-color: inherit;
-  padding: 20px 0;
+header li {
+	display: inline;
+	margin-right: 4vw;
 }
