@@ -8,8 +8,18 @@ html, body {
 	height: 100%;
 	width: 100%;
 	position: relative;
+    display: flex;
+     flex-direction: column;
+}
+main {
+  flex: 1; /* Pushes footer to bottom when there's not enough content */
 }
 
+footer {
+  background-color: #f2fbff;
+  padding: 20px 0;
+  text-align: center;
+}
 
 /* Header styles */
 header {
@@ -86,4 +96,8 @@ header li {
 .text {
 	position: relative;
 	z-index: 10;
+}
+
+.sd {
+	position: relative;
 }
