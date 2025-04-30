@@ -73,6 +73,7 @@ header li {
 	padding: 100px;
 	align-items: center;
 	color: #ffffff;
+	z-index: 2 ;
 }
 .showcase video {
 	position: absolute;
