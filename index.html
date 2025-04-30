@@ -61,10 +61,21 @@
 			'sounds/jesus.wav'
 		];
 
+		let currentAudio = null;
+
 		document.getElementById("logo").addEventListener("click", function () {
+			// If audio is already playing, stop it
+			if (currentAudio && !currentAudio.paused) {
+				currentAudio.pause();
+				currentAudio.currentTime = 0; // Reset audio
+				currentAudio = null;
+				return;
+			}
+
+			// Otherwise, play a new random audio
 			const randomIndex = Math.floor(Math.random() * soundFiles.length);
-			const randomSound = new Audio(soundFiles[randomIndex]);
-			randomSound.play();
+			currentAudio = new Audio(soundFiles[randomIndex]);
+			currentAudio.play();
 		});
 	</script>
 </body>
