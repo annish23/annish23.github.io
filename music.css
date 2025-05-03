@@ -1,102 +1,100 @@
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html, body {
-	height: 100%;
-	width: 100%;
-	font-family: sans-serif;
-	overflow-x: hidden;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	background-color: #000; /* fallback in case video doesn't load */
-}
-
-/* Main content wrapper */
-main {
-	flex: 1;
-	position: relative;
-	z-index: 1; /* Keep content above background video */
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  background-color: #000;
 }
 
 header {
-	background-color: #000;
-	height: 80px;
-	width: 100%;
-	position: fixed; /* stick to top */
-	top: 0;
-	left: 0;
-	z-index: 1000; /* ensure it's above the video */
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 5vw;
+  background-color: #000;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
 }
 
 header ul {
-	position: absolute;
-	right: 5vw;
-	top: 0;
-	line-height: 80px;
+  position: absolute;
+  right: 5vw;
+  top: 0;
+  line-height: 80px;
 }
 
 header li {
-	display: inline;
-	margin-right: 4vw;
+  display: inline;
+  margin-right: 4vw;
 }
 
 header a {
-	color: #fff;
-	text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 header a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 h1 {
-	color: #fff;
-	position: absolute;
-	left: 120px;
-	top: 0;
-	line-height: 80px;
-	background-image: url(images/mikulogo.gif);
-	background-repeat: no-repeat;
-	background-size: 50px 50px;
-	background-position: center center;
-	width: 210px;
-	height: 80px;
-	text-indent: -9999px;
+  color: #fff;
+  position: absolute;
+  left: 120px;
+  top: 0;
+  line-height: 80px;
+  background-image: url(images/mikulogo.gif);
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  background-position: center center;
+  width: 210px;
+  height: 80px;
+  text-indent: -9999px;
 }
 
 #bgVideo {
-	position: fixed;
-	top: 0;
-	left: 0;
-	min-width: 100vw;
-	min-height: 100vh;
-	width: auto;
-	height: auto;
-	object-fit: cover;
-	z-index: -1;
-	pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
 }
 
+/* MAIN LAYOUT FOR CENTERING CONTENT */
+main {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding-top: 100px; /* Adjust for fixed header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MUSIC PLAYER GRID */
 .music-gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start; /* align items to the top of their container */
+  align-items: flex-start;
   gap: 30px;
-  padding-top: 120px; /* creates space below fixed header */
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 60px;
-  min-height: calc(100vh - 80px); /* ensures it fills full screen minus header */
-  box-sizing: border-box;
+  max-width: 1200px;
+  padding: 20px;
 }
 
 .music-player {
