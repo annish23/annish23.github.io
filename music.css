@@ -89,8 +89,14 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 40px;
+  align-items: flex-start; /* align items to the top of their container */
+  gap: 30px;
+  padding-top: 120px; /* creates space below fixed header */
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 60px;
+  min-height: calc(100vh - 80px); /* ensures it fills full screen minus header */
+  box-sizing: border-box;
 }
 
 .music-player {
