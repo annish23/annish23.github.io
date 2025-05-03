@@ -1,6 +1,7 @@
+/* Reset and base layout */
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -9,7 +10,19 @@ html, body {
   width: 100%;
   font-family: sans-serif;
   overflow-x: hidden;
-  background-color: #000;
+  background-color: #000; /* fallback color */
+  position: relative;
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
 }
 
 header {
@@ -27,32 +40,28 @@ header {
 }
 
 header ul {
-  position: absolute;
-  right: 5vw;
-  top: 0;
-  line-height: 80px;
+  list-style: none;
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  height: 80px;
 }
 
 header li {
   display: inline;
-  margin-right: 4vw;
 }
 
 header a {
   color: #fff;
   text-decoration: none;
+  font-size: 16px;
 }
 
 header a:hover {
   text-decoration: underline;
 }
 
-h1 {
-  color: #fff;
-  position: absolute;
-  left: 120px;
-  top: 0;
-  line-height: 80px;
+h1#logo {
   background-image: url(images/mikulogo.gif);
   background-repeat: no-repeat;
   background-size: 50px 50px;
@@ -62,46 +71,30 @@ h1 {
   text-indent: -9999px;
 }
 
-#bgVideo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100vw;
-  min-height: 100vh;
-  width: auto;
-  height: auto;
-  object-fit: cover;
-  z-index: -1;
-  pointer-events: none;
-}
-
-/* MAIN LAYOUT FOR CENTERING CONTENT */
+/* Music section */
 main {
-  position: relative;
-  z-index: 1;
+  padding-top: 100px; /* prevents content from being hidden behind header */
   min-height: 100vh;
-  padding-top: 100px; /* Adjust for fixed header */
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
-/* MUSIC PLAYER GRID */
 .music-gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 30px;
-  max-width: 1200px;
-  padding: 20px;
+  max-width: 90%;
+  margin: auto;
 }
 
 .music-player {
   width: 250px;
-  background-color: #fff;
+  background-color: #ffffffcc;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   padding: 15px;
   text-align: center;
 }
