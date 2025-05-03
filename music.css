@@ -15,7 +15,7 @@ html, body {
 }
 
 #bgVideo {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -79,6 +79,20 @@ main {
   align-items: center;
   justify-content: center;
 }
+.showcase {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	overflow: hidden;
+	background-color: black; /* fallback in case video doesn't load */
+	z-index: 0;
+}
+
 
 .music-gallery {
   display: flex;
@@ -88,6 +102,8 @@ main {
   gap: 30px;
   max-width: 90%;
   margin: auto;
+  height: auto;
+  }
 }
 
 .music-player {
@@ -97,6 +113,8 @@ main {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   padding: 15px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .music-player img {
