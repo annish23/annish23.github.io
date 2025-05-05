@@ -76,14 +76,12 @@ h1#logo {
 main {
   padding-top: 100px; /* space below header */
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block; /* FIXED: changed from flex to block */
 }
 
 /* Music Gallery Layout */
 .music-gallery {
-  display: flex; /* <-- Changed from inline to flex */
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
@@ -91,7 +89,19 @@ main {
   width: 100%;
   padding: 40px 5vw;
   flex-wrap: nowrap;
-  overflow-x: auto; /* allows scrolling if content overflows horizontally */
+  overflow-x: auto;
+}
+
+/* Optional scrollbar styling */
+.music-gallery::-webkit-scrollbar {
+  height: 10px;
+}
+.music-gallery::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+.music-gallery::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /* Individual Music Player */
