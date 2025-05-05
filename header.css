@@ -67,3 +67,26 @@ h1 {
 	height: 80px;
 	text-indent: -9999px;
 }
+
+body {
+  margin: 0;
+  background: #000;
+}
+
+.music-gallery {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 20px;
+  overflow-x: auto;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.music-player {
+  width: 250px;
+  background: white;
+  flex-shrink: 0;
+  padding: 10px;
+  border-radius: 8px;
+}
