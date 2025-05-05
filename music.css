@@ -83,7 +83,7 @@ main {
 
 /* Music Gallery Layout */
 .music-gallery {
-  display:inline;
+  display: flex; /* <-- Changed from inline to flex */
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
@@ -91,7 +91,7 @@ main {
   width: 100%;
   padding: 40px 5vw;
   flex-wrap: nowrap;
-  overflow-x: auto; /* optional horizontal scroll if too many items */
+  overflow-x: auto; /* allows scrolling if content overflows horizontally */
 }
 
 /* Individual Music Player */
