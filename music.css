@@ -27,51 +27,54 @@ html, body {
 
 /* Header */
 header {
-  background-color: #000;
-  height: 80px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5vw;
+	background-color: #000;
+	height: 80px;
+	width: 100%;
+	position: fixed; /* stick to top */
+	top: 0;
+	left: 0;
+	z-index: 1000; /* ensure it's above the video */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 5vw;
 }
 
 header ul {
-  list-style: none;
-  display: flex;
-  gap: 2vw;
-  align-items: center;
-  height: 80px;
+	position: absolute;
+	right: 5vw;
+	top: 0;
+	line-height: 80px;
 }
 
 header li {
-  display: inline;
+	display: inline;
+	margin-right: 4vw;
 }
 
 header a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
+	color: #fff;
+	text-decoration: none;
 }
 
 header a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
-h1#logo {
-  background-image: url(images/mikulogo.gif);
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
-  background-position: center center;
-  width: 210px;
-  height: 80px;
-  text-indent: -9999px;
-}
-
+h1 {
+	color: #fff;
+	position: absolute;
+	left: 120px;
+	top: 0;
+	line-height: 80px;
+	background-image: url(images/mikulogo.gif);
+	background-repeat: no-repeat;
+	background-size: 50px 50px;
+	background-position: center center;
+	width: 210px;
+	height: 80px;
+	text-indent: -9999px;
+} 
 /* Main section */
 main {
   padding-top: 100px; /* space below header */
