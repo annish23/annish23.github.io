@@ -66,4 +66,29 @@ h1 {
 	width: 210px;
 	height: 80px;
 	text-indent: -9999px;
+} 
+
+.container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 1000px;
+	background: #f2fbff;
+	box-shadow: 0 30px 50px #dbdbdb;
 }
+
+.container .slide .item{
+	width: 200px;
+	height: 300px;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	border-radius: 20px;
+	box-shadow: 0 30px 50px #505050;
+	background-position: 50% 50%;
+	background-size: cover;
+	display: inline-block;
+	transition: 0.5s;
+}
+
