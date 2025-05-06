@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Annie(Zhiqing) Zhang SFX - Music</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+  <title>Annie(Zhiqing) Zhang SFX</title>
+  <link rel="stylesheet" href="music.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
 </head>
 <body>
   <header>
@@ -22,87 +22,105 @@
 
   <main>
     <section class="showcase">
+      <!-- Video Background -->
       <video autoplay muted loop id="bgVideo">
         <source src="Neon.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <div class="music-gallery">
-        <div class="music-player">
-          <nav>
-            <div class="circle"><i class="fa-solid fa-angle-left"></i></div>
-            <div class="circle"><i class="fa-solid fa-bars"></i></div>
-          </nav>
-          <img src="./musiccover/Cover1.jpg" class="song-img" alt="Cover 1">
-          <h1>Turn It Back</h1>
-          <p>Annie Zhang</p>
-          <audio id="song1">
-            <source src="TurnItBack.mp3" type="audio/mp3">
-          </audio>
-          <input type="range" value="0" class="progress" id="progress1">
-          <div class="controls">
-            <div><i class="fa-solid fa-backward"></i></div>
-            <div onclick="playPause('song1', 'ctrlIcon1')"><i class="fa-solid fa-play" id="ctrlIcon1"></i></div>
-            <div><i class="fa-solid fa-forward"></i></div>
-          </div>
-        </div>
+      <!-- Music Gallery -->
+	  <div class="music-gallery">
 
-        <div class="music-player">
-          <nav>
-            <div class="circle"><i class="fa-solid fa-angle-left"></i></div>
-            <div class="circle"><i class="fa-solid fa-bars"></i></div>
-          </nav>
-          <img src="./musiccover/Cover3.jpg" class="song-img" alt="Cover 2">
-          <h1>Maple Groove</h1>
-          <p>Annie Zhang</p>
-          <audio id="song2">
-            <source src="Maple Groove.wav" type="audio/wav">
-          </audio>
-          <input type="range" value="0" class="progress" id="progress2">
-          <div class="controls">
-            <div><i class="fa-solid fa-backward"></i></div>
-            <div onclick="playPause('song2', 'ctrlIcon2')"><i class="fa-solid fa-play" id="ctrlIcon2"></i></div>
-            <div><i class="fa-solid fa-forward"></i></div>
-          </div>
-        </div>
+	    <!-- Player 1 -->
+	    <div class="music-player">
+	      <nav>
+	        <div class="circle"><i class="fa-solid fa-angle-left"></i></div>
+	        <div class="circle"><i class="fa-solid fa-bars"></i></div>
+	      </nav>
+	      <img src="./musiccover/Cover1.jpg" class="song-img" alt="Cover 1">
+	      <h1>Turn It Back</h1>
+	      <p>Artist Name</p>
+	      <audio id="song1">
+	        <source src="TurnItBack.mp3" type="audio/mp3">
+	      </audio>
+	      <input type="range" value="0" class="progress" id="progress1">
+	      <div class="controls">
+	        <div><i class="fa-solid fa-backward"></i></div>
+	        <div onclick="playPause('song1', 'ctrlIcon1')">
+	          <i class="fa-solid fa-play" id="ctrlIcon1"></i>
+	        </div>
+	        <div><i class="fa-solid fa-forward"></i></div>
+	      </div>
+	    </div>
 
-        <!-- Repeat the same structure for additional songs -->
+	    <!-- Player 2 -->
+	    <div class="music-player">
+	      <nav>
+	        <div class="circle"><i class="fa-solid fa-angle-left"></i></div>
+	        <div class="circle"><i class="fa-solid fa-bars"></i></div>
+	      </nav>
+	      <img src="./musiccover/Cover2.jpg" class="song-img" alt="Cover 2">
+	      <h1>Chill Lofi</h1>
+	      <p>Artist Name</p>
+	      <audio id="song2">
+	        <source src="ChillLofi.mp3" type="audio/mp3">
+	      </audio>
+	      <input type="range" value="0" class="progress" id="progress2">
+	      <div class="controls">
+	        <div><i class="fa-solid fa-backward"></i></div>
+	        <div onclick="playPause('song2', 'ctrlIcon2')">
+	          <i class="fa-solid fa-play" id="ctrlIcon2"></i>
+	        </div>
+	        <div><i class="fa-solid fa-forward"></i></div>
+	      </div>
+	    </div>
 
-      </div>
+	    <!-- Player 3 -->
+	    <div class="music-player">
+	      <nav>
+	        <div class="circle"><i class="fa-solid fa-angle-left"></i></div>
+	        <div class="circle"><i class="fa-solid fa-bars"></i></div>
+	      </nav>
+	      <img src="./musiccover/Cover3.jpg" class="song-img" alt="Cover 3">
+	      <h1>Go - NEFFEX</h1>
+	      <p>NEFFEX</p>
+	      <audio id="song3">
+	        <source src="Go-NEFFEX.mp3" type="audio/mp3">
+	      </audio>
+	      <input type="range" value="0" class="progress" id="progress3">
+	      <div class="controls">
+	        <div><i class="fa-solid fa-backward"></i></div>
+	        <div onclick="playPause('song3', 'ctrlIcon3')">
+	          <i class="fa-solid fa-play" id="ctrlIcon3"></i>
+	        </div>
+	        <div><i class="fa-solid fa-forward"></i></div>
+	      </div>
+	    </div>
+
+	    <!-- Player 4 -->
+	    <div class="music-player">
+	      <nav>
+	        <div class="circle"><i class="fa-solid fa-angle-left"></i></div>
+	        <div class="circle"><i class="fa-solid fa-bars"></i></div>
+	      </nav>
+	      <img src="./musiccover/Cover4.jpg" class="song-img" alt="Cover 4">
+	      <h1>Maple Groove</h1>
+	      <p>Artist Name</p>
+	      <audio id="song4">
+	        <source src="Maple Groove.wav" type="audio/wav">
+	      </audio>
+	      <input type="range" value="0" class="progress" id="progress4">
+	      <div class="controls">
+	        <div><i class="fa-solid fa-backward"></i></div>
+	        <div onclick="playPause('song4', 'ctrlIcon4')">
+	          <i class="fa-solid fa-play" id="ctrlIcon4"></i>
+	        </div>
+	        <div><i class="fa-solid fa-forward"></i></div>
+	      </div>
+	    </div>
+
+	  </div>
     </section>
   </main>
-
-  <script>
-    function playPause(songId, iconId) {
-      const song = document.getElementById(songId);
-      const icon = document.getElementById(iconId);
-      const progress = document.getElementById(`progress${songId.slice(-1)}`);
-
-      if (icon.classList.contains("fa-pause")) {
-        song.pause();
-        icon.classList.remove("fa-pause");
-        icon.classList.add("fa-play");
-      } else {
-        song.play();
-        icon.classList.add("fa-pause");
-        icon.classList.remove("fa-play");
-      }
-
-      song.ontimeupdate = function () {
-        progress.value = song.currentTime;
-      }
-
-      progress.oninput = function () {
-        song.currentTime = progress.value;
-        song.play();
-        icon.classList.add("fa-pause");
-        icon.classList.remove("fa-play");
-      }
-
-      song.onloadedmetadata = function () {
-        progress.max = song.duration;
-      }
-    }
-  </script>
 </body>
 </html>
