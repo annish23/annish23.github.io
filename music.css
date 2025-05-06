@@ -116,9 +116,9 @@ main {
 }
 
 .music-player img {
-  height: 100vh;       /* Fill full height of viewport */
+  height: 200px;       /* Smaller image */
   width: auto;         /* Maintain aspect ratio */
-  object-fit: cover;   /* Ensure it crops properly if needed */
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
 }
