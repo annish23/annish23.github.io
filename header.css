@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 
-html, body {
+html {
 	height: 100%;
 	width: 100%;
 	font-family: sans-serif;
@@ -68,12 +68,17 @@ h1 {
 	text-indent: -9999px;
 } 
 
+body{
+	background: #eaeaea;
+}
+
 .container{
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 1000px;
+	height: 600px;
 	background: #f2fbff;
 	box-shadow: 0 30px 50px #dbdbdb;
 }
