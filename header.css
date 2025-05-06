@@ -109,12 +109,9 @@ body{
 }
 
 .slide .item:nth-child(3){
-	left: 50%;
-}
-.slide .item:nth-child(4){
 	left: calc(50% + 440px);
 }
-.slide .item:nth-child(n+5){
+.slide .item:nth-child(n+4){
 	left: calc(50% + 660px);
 	opacity: 0;
 }
