@@ -99,8 +99,11 @@ main {
   overflow-x: auto;
 }
 
+
 /* Individual Music Player */
 .music-player {
+  display: inline;
+  margin-right: 4vw;
   width: 250px;
   background-color: #ffffffcc;
   border-radius: 12px;
