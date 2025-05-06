@@ -111,10 +111,14 @@ body{
 .slide .item:nth-child(3){
 	left: calc(50% + 440px);
 }
-.slide .item:nth-child(n+4){
+.slide .item:nth-child(4){
 	left: calc(50% + 660px);
+}
+.slide .item:nth-child(n+5){
+	left: calc(50% + 880px);
 	opacity: 0;
 }
+
 
 
 .item .content{
