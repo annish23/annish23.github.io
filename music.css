@@ -119,7 +119,7 @@ main {
   height: 200px;       /* Smaller image */
   width: auto;         /* Maintain aspect ratio */
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 0;    /* Removed rounded corners */
   margin-bottom: 10px;
 }
 
