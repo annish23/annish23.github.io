@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <title>Annie(Zhiqing) Zhang SFX</title>
+  <link rel="stylesheet" href="music.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player Design - Easy Tutorials</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="music.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
+<body>
+  <header>
+    <h1 id="logo">AZ</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Sound Design</a></li>
+        <li><a href="musicplayer.html">Music</a></li>
+        <li><a href="cosplay.html">Cosplay</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 <body>
 <div class="container">
     <div class="music-player">
@@ -17,12 +34,12 @@
             <i class="fa-solid fa-bars"></i>
         </div>
     </nav>
-    <img src="media/thumbnail.png" class="song-img">
-    <h1>Despacito</h1>
+    <img src="./musiccover/Cover1.jpg" class="song-img">
+    <h1>Turn It Back</h1>
     <p>Luis Fonsi Ft. Puerto Rican</p>
 
     <audio id="song">
-        <source src="media/Go-NEFFEX.mp3" type="audio/mpeg">
+        <source src="TurnItBack.mp3" type="audio/mpeg">
     </audio>
     <input type="range" value="0" id="progress">
 

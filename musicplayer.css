@@ -4,6 +4,74 @@
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  background-color: #000;
+  position: relative;
+}
+
+/* Background Video */
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Header */
+header {
+  background-color: #000;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  height: 80px;
+}
+
+header li {
+  display: inline;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+h1#logo {
+  background-image: url(images/mikulogo.gif);
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  background-position: center center;
+  width: 210px;
+  height: 80px;
+  text-indent: -9999px;
+}
 .container{
   width: 100%;
   height: 100vh;
