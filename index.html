@@ -14,10 +14,10 @@
 		<h1 id="logo">AZ</h1>
 		<nav>
 			<ul>
-				<li><a href="index.html">Sound Design</a></li>
-				<li><a href="music.html">Music</a></li>
-				<li><a href="cosplay.html">Cosplay</a></li>
-				<li><a href="#">Contact</a></li>
+			    <li><a href="index.html" data-sound="click1.mp3">Sound Design</a></li>
+			    <li><a href="music.html" data-sound="click2.mp3">Music</a></li>
+			    <li><a href="cosplay.html" data-sound="click3.mp3">Cosplay</a></li>
+			    <li><a href="#" data-sound="click4.mp3">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -55,6 +55,24 @@
 
 	<!-- 🔊 Sound trigger script -->
 	<script>
+			// Get all the header links
+			const headerLinks = document.querySelectorAll("header li a");
+
+			// Add click listener to each link
+			headerLinks.forEach(link => {
+				link.addEventListener("click", () => {
+					// Get the sound file for the clicked link from the data-sound attribute
+					const soundFile = link.getAttribute("data-sound");
+
+					// Create a new audio element with the corresponding sound file
+					const sound = new Audio(`sounds/${soundFile}`); // Adjust the path if needed
+
+					// Play the sound
+					sound.play();
+				});
+			});
+			
+	//logo sound//
 		const soundFiles = [
 			'sounds/beam.wav',
 			'sounds/lemon.wav',
