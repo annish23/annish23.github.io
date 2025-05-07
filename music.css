@@ -86,12 +86,13 @@ main {
   justify-content: center;
 }
 .music-title {
-  font-size: 36px;
-  color: #fff;
+  font-size: 48px; /* Bigger title */
+  color: white;
   text-align: center;
-  margin-bottom: 30px;
+  margin-top: 120px; /* Space below the fixed header */
+  margin-bottom: 60px; /* Space above the music gallery */
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 /* Showcase section (make sure it doesn't constrain layout) */
