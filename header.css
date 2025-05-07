@@ -68,9 +68,25 @@ h1 {
 	text-indent: -9999px;
 } 
 	
-body{
-	background: #eaeaea;
-	overflow: hidden;
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: sans-serif;
+  position: relative;
+}
+
+/* Background Video */
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .container{
