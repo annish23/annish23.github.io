@@ -113,15 +113,12 @@ main {
 }
 
 
-/* Individual Music Player */
 .music-player {
-  display: inline;
-  margin-right: 4vw;
-  width: 250px;
+  width: 320px; /* was 250px */
   background-color: #ffffffcc;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  padding: 15px;
+  padding: 20px;
   text-align: center;
   flex-shrink: 0;
   position: relative;
@@ -129,11 +126,15 @@ main {
 }
 
 .music-player img {
-  height: 200px;       /* Smaller image */
-  width: auto;         /* Maintain aspect ratio */
+  height: 240px;   /* was 200px */
+  width: 100%;     /* make it stretch */
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.controls i {
+  font-size: 30px;  /* increase icon size */
 }
 
 .music-player audio {
