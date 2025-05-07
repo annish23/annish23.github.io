@@ -26,7 +26,6 @@ html, body {
   z-index: -1;
   pointer-events: none;
 }
-
 /* Header */
 header {
 	background-color: #000;
@@ -80,7 +79,7 @@ h1 {
 
 /* Main section */
 main {
-  padding-top: 100px; /* prevents content from being hidden behind header */
+  padding-top: 100px; /* space below header */
   min-height: 100vh;
   display: flex;
   align-items: center;
