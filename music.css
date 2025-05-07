@@ -131,3 +131,17 @@ main {
 .music-player audio {
   width: 100%;
 }
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* space between icons */
+  margin-top: 10px;
+}
+
+.controls div {
+  cursor: pointer;
+  font-size: 24px;
+  color: #000;
+}
