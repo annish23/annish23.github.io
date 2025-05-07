@@ -82,22 +82,21 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
-  z-index: -1;
+  z-index: -1; /* Keeps it in the background */
   pointer-events: none;
 }
 
-.container{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+.container {
+	position: relative; /* instead of absolute */
+	margin: 160px auto 60px auto; /* Add top margin to account for header height */
 	width: 1000px;
 	height: 600px;
-	background: #f2fbff;
+	background: #f2fbffcc; /* Add transparency for video to show through */
 	box-shadow: 0 30px 50px #dbdbdb;
+	border-radius: 16px;
 }
 
 .container .slide .item{
