@@ -85,6 +85,14 @@ main {
   align-items: center;
   justify-content: center;
 }
+.music-title {
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
 
 /* Showcase section (make sure it doesn't constrain layout) */
 .showcase {
