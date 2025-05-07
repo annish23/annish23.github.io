@@ -9,7 +9,7 @@ html, body {
   width: 100%;
   font-family: sans-serif;
   overflow-x: hidden;
-  background-color: #000;
+  background-color: #000; /* fallback color */
   position: relative;
 }
 
@@ -18,14 +18,11 @@ html, body {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
-  opacity: 1;
-  background-color: black;
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* Header */
@@ -81,7 +78,7 @@ h1 {
 
 /* Main section */
 main {
-  padding-top: 100px; /* space below header */
+  padding-top: 100px; /* prevents content from being hidden behind header */
   min-height: 100vh;
   display: flex;
   align-items: center;
